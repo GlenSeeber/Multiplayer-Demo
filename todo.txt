@@ -1,0 +1,22 @@
+To Do:
+
+- add reading and writing to both client and server
+
+- add time, so that they can act based on ticks
+
+- both client and server will read continously, but only send once per tick
+	(this is because connection issues can make messages not necessarily be
+	recieved exactly on the tick mark, so you need to just be prepared to read
+	them whenever they are ready.)
+
+- create some kind of data the client can continously send, and the server can
+	relay it over to all other clients, and vice versa for every other client
+	as well.
+
+- create a "phone book" so that the server can know who's who, and send data to
+	everyone (UDP is connectionless). It also allows the server to tell the
+	other clients who the message came from, as well as prove that clients
+	aren't faking messages as if they are a different client.
+
+- Test it! Get a working basic model just in the terminal. Once that works, try
+	it in Unity (after doing some C# scripting to create a client).

@@ -1,0 +1,12 @@
+basic 2d top down game. Essentially no physics will be used in this demo.
+All I'm trying to do is create a functional model of a game which has
+online multiplayer, where users can control their character, and have
+those movements show up on everyone else's screens within a reasonable
+time buffer.
+
+We'll use a client-server model, probably with one of the clients
+"hosting" the game, acting as both client and server.
+
+Since the game isn't based on "states", we will be using UDP. We will send
+movement of other players every tick, and recieve such data once again,
+every tick. We will also refresh all the states every few ticks, perhaps once every 300 ticks we reset the locations.
